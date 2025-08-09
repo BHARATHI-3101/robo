@@ -1,0 +1,383 @@
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  background-color: rgb(213, 179, 179);
+  margin-top: -50px;
+ }
+
+
+ audio {
+  width: 250px;
+  border: 2px solid #4CAF50;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  margin-right: 450px;
+  margin-top: -400px;
+}
+
+
+
+
+#title {
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      text-align: center;
+      padding: -10px;
+      margin-left: -600px;
+}
+
+
+
+#robot {
+  position: relative;
+}
+.comb {
+  width: 15px;
+  height: 50px;
+  position: absolute;
+  top: -50px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  animation: blinkColors 1s infinite;
+  justify-content: space-around;
+}
+
+
+.comb-left {
+  left: 50px;
+}
+
+.comb-right {
+  right: 50px;
+}
+
+#face {
+  height: 200px;
+  width: 200px;
+  background-color: rgb(248, 253, 237);
+  border-radius: 25px;
+  box-shadow: 10px 0px 35px rgb(173, 221, 249);
+  margin: 0 auto;
+  animation: bounce-head 2s infinite ease-in-out;
+}
+
+#eyes {
+   display: flex; 
+  justify-content: space-around;
+  padding-top: 80px;
+}
+
+#eye1, #eye2 {
+  background-color: rgb(10, 10, 10);
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  position: relative;
+  margin-top: -50px;
+  animation: blink 2s infinite;
+}
+
+#iris1, #iris2 {
+  background-color: rgb(248, 250, 251);
+  height: 30px;
+  width: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 12px;
+  left: 16px;
+}
+
+#mouth {
+  height: 30px;
+  width: 70px;
+  background-color: black;
+  border-radius: 0% 0% 50% 50%;
+  margin: 50px auto 0;  /* moved 20px lower */
+  animation: pulse-mouth 2s infinite;
+}
+
+
+#tounge {
+  height: 50px;
+  width: 30px;
+  background-color: red;
+  border-radius: 0% 0% 50% 50%;
+  margin: 20px auto 0; /* moved 10px lower */
+  transform: translateY(-30px);
+  transition:tounge 0.3s ease;
+  animation-name: tt;
+  animation-duration: 1s;
+  animation-iteration-count: 1000;
+  animation-delay: 3s;
+}
+@keyframes tt{
+  from{height: 5px;}
+  to{height: 55px;}
+}
+
+
+#neck {
+  height: 60px;
+  width: 100px;
+  background-color: rgb(249, 248, 250);
+  margin: -20px auto 0;
+  border-radius: 20px;
+}
+
+
+ #tie-knot {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(6, 6, 6);
+  position: absolute;
+  top: 240px; /* adjust as needed */
+  left: 90px;
+  z-index: 2;
+  /* animation: blink-colors 1s infinite; */
+}
+
+#tie-long {
+  width: 20px;
+  height: 150px;
+  background-color: black;
+  position: absolute;
+  top: 240px; /* adjust to match knot position */
+  left: 95px;
+  z-index: 1;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  /* animation: swing-tie 2s infinite alternate ease-in-out, 
+             blink-colors 1s infinite; */
+}
+
+
+ 
+ #body2 {
+  height: 250px;
+  width: 200px;
+  background-color: rgb(18, 170, 155);
+  border-radius: 25%;
+  margin: 0 auto;
+  position: relative;
+  animation: dance-body 2s infinite ease-in-out;
+}
+
+/* Common button style */
+.button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  border-radius: 50%;
+  animation: blink-colors 1s infinite;
+}
+
+/* Individual button positions */
+.button1 { top: 60px; }
+.button2 { top: 120px; }
+.button3 { top: 180px; }
+
+/* Blink color animation (same as tie) */
+@keyframes blink-colors {
+  0% { background-color: red; }
+  25% { background-color: yellow; }
+  50% { background-color: blue; }
+  75% { background-color: green; }
+  100% { background-color: red; }
+}
+
+/* Body dance animation */
+@keyframes dance-body {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(5deg); }
+}
+
+
+
+#sholder, #sholder2 {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(250, 249, 251);
+  border-radius: 50%;
+  
+  position: absolute;
+  top: 360px;
+}
+
+#sholder {
+  left: 700px;
+  margin-top: -108px;
+  margin-left: -700px;
+  margin-bottom: 100px;
+}
+
+#sholder2 {
+  right: -50px;
+  margin-top: -108px;
+  margin-right: 40px;
+  margin-bottom: 100px;
+}
+
+#left-hand, #right-hand {
+  height: 250px;
+  width: 30px;
+  background-color: rgb(232, 203, 179);
+  border-radius: 255%;
+  position: absolute;
+  top: 400px;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transform-origin: top center;
+}
+
+#left-hand {
+  left: px;
+  margin-top: -120px;
+    animation-name: swing-arm-left;  
+}
+
+#right-hand {
+  right: -14px;
+  margin-top: -120px;
+   animation-name: swing-arm-right; 
+}
+
+ #left-leg, #right-leg {
+  height: 200px;
+  width: 40px;
+  background-color: rgb(232, 203, 179);
+  border-radius: 40px;
+  position: absolute;
+  top: 650px;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transform-origin: top center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#left-leg {
+  left: 100px;
+  margin-top: -150px;
+  margin-left:-50px ;
+  animation-name: swing-leg-left;
+}
+
+#right-leg {
+  left: 190px;
+  margin-top: -150px;
+  margin-left:-70px ;
+  animation-name: swing-leg-right;
+} 
+
+
+
+
+
+
+
+/* Shoes inside legs */
+.shoe {
+  height: 40px;
+  width: 60px;
+  background-color: rgb(108, 30, 30);
+  border-radius: 10px 10px 5px 5px;
+  position: absolute;
+  bottom: -20px; /* makes it appear just under the leg */
+}
+
+#leftcircle {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(248, 247, 249); /* You can change the color */
+  border-radius: 50%;
+  margin-left:120px ;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* optional glowing effect */
+}
+#rightcircle {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(251, 250, 252); /* You can change the color */
+  border-radius: 50%;
+  margin-left: 50px;
+  margin-top: -39px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* optional glowing effect */
+}
+
+
+
+
+@keyframes blink-colors {
+  0% { background-color: red; }
+  25% { background-color: yellow; }
+  50% { background-color: blue; }
+  75% { background-color: green; }
+  100% { background-color: red; }
+}
+
+/* Swing animation */
+/* @keyframes swing-tie {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(10deg); }
+} */
+
+
+
+@keyframes blinkColors {
+  0%   { background-color: red; }
+  20%  { background-color: orange; }
+  40%  { background-color: yellow; }
+  60%  { background-color: green; }
+  80%  { background-color: blue; }
+  100% { background-color: violet; }
+}
+
+@keyframes swing-arm-left {
+  from { transform: rotate(-30deg); }
+  to { transform: rotate(20deg); }
+}
+
+@keyframes swing-arm-right {
+  from { transform: rotate(30deg); }
+  to { transform: rotate(-20deg); }
+}
+
+@keyframes swing-leg-left {
+  from { transform: rotate(10deg); }
+  to { transform: rotate(-15deg); }
+}
+
+@keyframes swing-leg-right {
+  from { transform: rotate(-10deg); }
+  to { transform: rotate(15deg); }
+}
+
+@keyframes bounce-head {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes dance-body {
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(10px); }
+}
+
+@keyframes blink {
+  0%, 90%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.1); }
+}
+
+@keyframes pulse-mouth {
+  0%, 100% { transform: scaleX(1); }
+  50% { transform: scaleX(1.3); }
+}
+
